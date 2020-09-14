@@ -1,0 +1,25 @@
+// import du fichier de variable
+@import 'src/styles/vars';
+
+.ingredients {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+
+  .ingredient {
+    padding: 0.8rem 2rem;
+    border-bottom: 1px solid #ccc;
+
+    // & sera remplacé automatiquement par le nom du parent, ici ".ingredient"
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    .quantity {
+      background-color: $mainColor;
+      color: #fff;
+      padding: 0.3rem 1rem;
+      border-radius: 0.3rem;
+      margin-right: 0.5rem;
+    }
+  }
+}
