@@ -23,7 +23,10 @@ Ingredients.propTypes = {
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
       unit: PropTypes.string.isRequired,
-      quantity: PropTypes.number.isRequired,
+      quantity: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number,
+      ]).isRequired,
     }).isRequired,
   ).isRequired,
 };

@@ -28,12 +28,12 @@ const Page = () => (
         path="/"
         exact
       >
-        <Home />
+        <Home recipes={data} />
       </Route>
       <Route
-        path="/recipe/recette1"
+        path="/recipe/:slug"
       >
-        <Recipe recipe={data[0]} />
+        <Recipe recipes={data} />
       </Route>
       {}
       {/* <Recipe recipe={data[0]} /> */}
