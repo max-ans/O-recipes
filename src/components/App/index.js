@@ -1,7 +1,7 @@
 // == Import npm
 import React from 'react';
 
-import SideBar from 'src/components/SideBar';
+import SideBar from 'src/containers/SideBar';
 import MainContent from 'src/components/MainContent';
 
 // == Import
