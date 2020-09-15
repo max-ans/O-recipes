@@ -1,0 +1,22 @@
+@import '../../styles/vars';
+
+.mainContent {
+
+  background-color: $backgroundColor;
+  padding: 0.2em;
+  position: relative;
+  left: 20%;
+  top: 0px;
+  width: 80%;
+
+  .main-title {
+    font-weight: bold;
+    font-size: 2em;
+    padding: 1em;
+  }
+
+  .main-paragraphe {
+    padding: 1em;
+    margin-left: 1em;
+  }
+}

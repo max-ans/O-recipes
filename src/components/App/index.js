@@ -2,6 +2,7 @@
 import React from 'react';
 
 import SideBar from 'src/components/SideBar';
+import MainContent from 'src/components/MainContent';
 
 // == Import
 
@@ -11,6 +12,8 @@ import './styles.scss';
 const App = () => (
   <div className="app">
     <SideBar />
+    <MainContent />
+
   </div>
 );
 
