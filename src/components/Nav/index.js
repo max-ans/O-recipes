@@ -1,12 +1,32 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import './nav.scss';
 
 const Nav = () => (
   <nav className="nav">
-    <a href="" className="nav-item">Accueil</a>
-    <a href="" className="nav-item nav-item--active">Recette 1</a>
-    <a href="" className="nav-item">Recette 2</a>
+    <NavLink
+      to="/"
+      className="nav-item"
+      activeClassName="nav-item--active"
+      exact
+    >
+      Accueil
+    </NavLink>
+    <NavLink
+      to="/recipe/recette1"
+      className="nav-item "
+      activeClassName="nav-item--active"
+    >
+      Recette 1
+    </NavLink>
+    <NavLink
+      to="/recipe/recette2"
+      className="nav-item"
+      activeClassName="nav-item--active"
+    >
+      Recette 2
+    </NavLink>
   </nav>
 );
 

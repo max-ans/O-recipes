@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const RecipeSmall = () => (
   <article className="recipe-small">
@@ -10,7 +11,11 @@ const RecipeSmall = () => (
       <p>
         Difficulté: facile
       </p>
-      <a href="">Voir la recette</a>
+      <Link
+        to="/recipe/recette1"
+      >
+        Voir la recette
+      </Link>
     </div>
   </article>
 );
