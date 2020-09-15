@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 // == Import
 import Nav from 'src/containers/Nav';
 import Page from 'src/components/Page';
+import LoaderBurger from 'src/components/LoaderBurger';
 
 import './styles.scss';
 
@@ -15,7 +16,7 @@ const App = ({ fetchRecipes, loading }) => {
   }, []);
   return (
     <div className="app">
-      {loading && <div> Chargement en cours...</div>}
+      {loading && <LoaderBurger />}
       {!loading && (
         <>
           <Nav />
