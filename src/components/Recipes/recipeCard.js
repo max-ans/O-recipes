@@ -1,12 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const RecipeCard = () => (
+const RecipeCard = ({ thumbnail, difficulty, title }) => (
   <div className="recipeCard">
-    <img src="https://images.pexels.com/photos/53483/strawberries-crepe-dessert-sweet-53483.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="" className="recipe-img" />
-    <h3 className="recipe-title">Crêpes Raffinées</h3>
-    <p className="recipe-difficulty"> Dfficultée : Facile</p>
+    <img src={thumbnail} alt="" className="recipe-img" />
+    <h3 className="recipe-title">{title}</h3>
+    <p className="recipe-difficulty"> Dfficultée : {difficulty}</p>
     <a href="" className="recipe-details">Voir la recette</a>
   </div>
 );
+
+RecipeCard.propTypes = {
+  thumbnail: PropTypes.string.isRequired,
+  difficulty: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+};
 
 export default RecipeCard;

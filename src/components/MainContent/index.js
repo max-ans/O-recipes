@@ -1,5 +1,5 @@
 import React from 'react';
-import Recipes from 'src/components/Recipes';
+import Recipes from 'src/containers/Recipes';
 
 import './mainContent.scss';
 
