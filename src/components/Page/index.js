@@ -1,6 +1,6 @@
 import React from 'react';
-import Recipe from 'src/components/Recipe';
-import Home from 'src/components/Home';
+import Recipe from 'src/containers/Recipe';
+import Home from 'src/containers/Home';
 import { Route } from 'react-router-dom';
 
 /*
@@ -18,8 +18,6 @@ après les autres .
 
 import './page.scss';
 
-import data from 'src/data';
-
 const Page = () => (
   <div className="page">
     <h1 className="page-title">Orecipes</h1>
@@ -28,12 +26,12 @@ const Page = () => (
         path="/"
         exact
       >
-        <Home recipes={data} />
+        <Home />
       </Route>
       <Route
         path="/recipe/:slug"
       >
-        <Recipe recipes={data} />
+        <Recipe />
       </Route>
       {}
       {/* <Recipe recipe={data[0]} /> */}

@@ -2,17 +2,15 @@
 import React from 'react';
 
 // == Import
-import Nav from 'src/components/Nav';
+import Nav from 'src/containers/Nav';
 import Page from 'src/components/Page';
-
-import recipes from 'src/data';
 
 import './styles.scss';
 
 // == Composant
 const App = () => (
   <div className="app">
-    <Nav recipes={recipes} />
+    <Nav />
     <Page />
   </div>
 );
