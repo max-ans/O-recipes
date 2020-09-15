@@ -1,0 +1,22 @@
+@import '../../styles/vars';
+
+.navigation {
+
+  .sidebar {
+    float: left;
+    padding: 2em;
+    width: 33%;
+  
+  
+    .sidebar-item {
+      line-height: 1.2em;
+      padding: 0.5em;
+      font-size: 1.2em;
+  
+      &:hover {
+        color: $mainColor;
+      }
+    }
+  }
+}
+
