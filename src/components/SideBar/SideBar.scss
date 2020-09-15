@@ -17,6 +17,13 @@
       &:hover {
         color: $mainColor;
       }
+
+      .sidebar-item-link {
+
+        &.linked {
+          color: $mainColor;
+        }
+      }
     }
   }
 }

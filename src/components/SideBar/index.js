@@ -1,14 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 
 import './SideBar.scss';
 
 const SideBar = ({ recipes }) => (
   <nav className="navigation">
     <ul className="sidebar">
-      <li className="sidebar-item"> <a href=""> Accueil </a></li>
+      <li className="sidebar-item">
+        <NavLink
+          to="/"
+          activeClassName="linked"
+        >
+          Accueil
+        </NavLink>
+      </li>
       {recipes.map((recipe) => (
-        <li key={recipe.id} className="sidebar-item"> <a href=""> {recipe.title} </a></li>
+        <li key={recipe.id} className="sidebar-item">
+          <NavLink
+            className="sidebar-item-link"
+            to={`recipe/${recipe.slug}`}
+            exact
+            activeClassName="linked"
+          >
+            {recipe.title}
+          </NavLink>
+        </li>
       ))}
     </ul>
   </nav>

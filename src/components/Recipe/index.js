@@ -1,7 +1,7 @@
 // == Import : npm
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { useParams } from 'react-router-dom';
 // == Import : local
 // Composants
 import Title from './Title';
@@ -13,6 +13,10 @@ import './styles.scss';
 
 // == Composant
 function Recipe({ recipe }) {
+  const { slug } = useParams();
+
+  console.log(slug);
+  console.log(recipe);
   return (
     <div className="recipe">
       <Title
