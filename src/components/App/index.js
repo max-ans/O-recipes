@@ -9,20 +9,26 @@ import Page from 'src/components/Page';
 import './styles.scss';
 
 // == Composant
-const App = ({ fetchRecipes }) => {
+const App = ({ fetchRecipes, loading }) => {
   useEffect(() => {
     fetchRecipes();
   }, []);
   return (
     <div className="app">
-      <Nav />
-      <Page />
+      {loading && <div> Chargement en cours...</div>}
+      {!loading && (
+        <>
+          <Nav />
+          <Page />
+        </>
+      )}
     </div>
   );
 };
 
 App.propTypes = {
   fetchRecipes: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
 };
 
 // == Export
