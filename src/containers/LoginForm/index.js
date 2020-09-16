@@ -1,4 +1,9 @@
 import { connect } from 'react-redux';
+import {
+  updateInputValue,
+  sendLoginForm,
+  sendDisconnectRequest,
+} from 'src/actions/auth';
 
 // === on importe le composant de présentation
 import LoginForm from 'src/components/LoginForm';
@@ -14,16 +19,16 @@ const mapStateToProps = (state) => ({
 
 // === mapDispatchToProps
 // si j'ai besoin de dispatcher une action vers le store
-const mapDispatchToProps = ({dispatch}) => ({
+const mapDispatchToProps = (dispatch) => ({
   // nom de la prop à remplir: fonction qui dispatch l'action
-  changeField: () => {
-
+  changeField: (value, name) => {
+    dispatch(updateInputValue(value, name));
   },
   handleLogin: () => {
-
+    dispatch(sendLoginForm());
   },
   handleLogout: () => {
-
+    dispatch(sendDisconnectRequest());
   },
 });
 
