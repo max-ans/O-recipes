@@ -2,6 +2,7 @@ import React from 'react';
 import Recipe from 'src/containers/Recipe';
 import Home from 'src/containers/Home';
 import { Route } from 'react-router-dom';
+import Header from 'src/components/Header';
 
 /*
 Route sans Switch :
@@ -20,7 +21,7 @@ import './page.scss';
 
 const Page = () => (
   <div className="page">
-    <h1 className="page-title">Orecipes</h1>
+    <Header />
     <div className="page-content">
       <Route
         path="/"
