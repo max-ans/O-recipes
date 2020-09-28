@@ -11,7 +11,13 @@ const authMiddlewares = (store) => (next) => (action) => {
   switch (action.type) {
     case SEND_LOGIN_FORM: {
       const { email, password } = store.getState().auth;
-      axios.post('http://localhost:3001/login', { email, password })
+      // withCredentials: true, ===> autorisation d'accéder au cookies
+      axios.post('http://localhost:3001/login', {
+        email,
+        password,
+      }, {
+        withCredentials: true,
+      })
         .then((response) => {
           console.log(response);
           store.dispatch(connectUser(response.data.info));
@@ -23,7 +29,9 @@ const authMiddlewares = (store) => (next) => (action) => {
     }
       break;
     case SEND_DISCONNECT_REQUEST:
-      axios.post('http://localhost:3001/logout')
+      axios.post('http://localhost:3001/logout', {}, {
+        withCredentials: true,
+      })
         .then(() => {
           // console.log(response);
           store.dispatch(disconnectUser());

@@ -1,12 +1,13 @@
 @import '../../styles/vars';
 
 .header {
-  background-color: $titleBackground;
+  background-color: $mainColor;
   display: flex;
   align-items: center;
   justify-content: space-between;
   .header-title {
-    color: #222;
+    color: $titleBackground;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0);
     padding: 1em;
     font-weight: bold;
     font-size: 2em;

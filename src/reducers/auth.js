@@ -14,19 +14,20 @@ const initialState = {
 const auth = (state = initialState, action = {}) => {
   switch (action.type) {
     case UPDATE_INPUT_VALUE:
-      if (action.name === 'email') {
-        return {
-          ...state,
-          email: action.value,
-        };
-      }
+      // if (action.name === 'email') {
+      //   return {
+      //     ...state,
+      //     email: action.value,
+      //   };
+      // }
+      // return {
+      //   ...state,
+      //   password: action.value,
+      // };
       return {
         ...state,
-        password: action.value,
+        [action.name]: action.value,
       };
-      // return {
-      //   [action.name]: action.value,
-      // };
     case CONNECT_USER:
       return {
         ...state,

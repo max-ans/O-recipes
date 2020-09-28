@@ -1,3 +1,5 @@
+@import '../../styles/vars';
+
 .login-form {
   width: 50%;
 }
@@ -8,6 +10,8 @@
 .login-form-message {
   text-align: right;
   margin: .3em 1em;
+  color: $titleBackground;
+  text-shadow: 0px 0px 2px rgb(0, 0, 0);
 }
 .login-form-logged {
   display: flex;
@@ -23,4 +27,9 @@
   border: 0;
   padding: .7em;
   height: 2.5em;
+
+  &:hover{
+    color:  #f17f42;
+    background-color: #fff;
+  }
 }
